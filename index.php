@@ -29,10 +29,14 @@ session_start();
             <div class="mb-3">
                 <label for="pass_length_input" class="form-label">How long do you want your password to be? (min 5 max 20) </label>
                 <input type="number" class="form-control" id="pass_length_input" max=20 min=5 name="pass_length">
+                <div class="form-check form-switch mt-3">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" name="allow_repetition">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Allow character repetition</label>
+                </div>
 
             </div>
 
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary mt-2">Submit</button>
         </form>
     </div>
 
