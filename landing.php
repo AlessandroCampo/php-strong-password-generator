@@ -1,10 +1,7 @@
-<?
+<? session_start();
 
 include __DIR__ . './functions.php';
-include  __DIR__ .   './variables.php';
-session_start();
-
-
+include __DIR__ . './variables.php';
 
 ?>
 
@@ -16,28 +13,20 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
-    <title>Strong Password Generator</title>
+    <title>Document</title>
 </head>
 
 <body>
-    <div class="container">
-        <form action="redirect.php" method="get" class="w-25">
-            <div class="mb-3">
-                <label for="pass_length_input" class="form-label">How long do you want your password to be? (min 5 max 20) </label>
-                <input type="number" class="form-control" id="pass_length_input" max=20 min=5 name="pass_length">
-
-            </div>
-
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-    </div>
+    <p class="text-center mt-5 fs-3">
+        <span class="text-primary fw-bold me-2   ">La tua password è: </span> <? echo $_SESSION['generated_pass'] ?>
+    </p>
 
 
-
+    <?
+    // session_unset();
+    // session_destroy();
+    ?>
 
 
 
