@@ -1,4 +1,22 @@
-<? ?>
+<?
+
+$letters = array_merge(range('A', 'Z'), range('a', 'z'));
+$symbols = array('!', '@', '#', '$', '%', '^', '&', '*', '-', '_', '=', '+', '|', ';', ':',  ',', '.', '<', '>', '/', '?');
+$numbers = range(0, 9);
+$generated_pass = '';
+
+if (isset($_GET['pass_length'])) {
+
+    for ($i = 0; $i < $_GET['pass_length']; $i++) {
+        $one_to_three = rand(1, 3);
+        $randomArray = ($one_to_three == 1) ? $letters : (($one_to_three == 2) ? $symbols : $numbers);
+        $generated_pass .= $randomArray[rand(0, count($randomArray))];
+    }
+
+    var_dump($generated_pass);
+}
+
+?>
 
 
 
@@ -17,10 +35,10 @@
 
 <body>
     <div class="container">
-        <form action="/index.php" method="get" class="w-25">
+        <form action="index.php" method="get" class="w-25">
             <div class="mb-3">
                 <label for="pass_length_input" class="form-label">How long do you want your password to be? (min 5 max 20) </label>
-                <input type="number" class="form-control" id="pass_length_input" max=20 min=5>
+                <input type="number" class="form-control" id="pass_length_input" max=20 min=5 name="pass_length">
 
             </div>
 
