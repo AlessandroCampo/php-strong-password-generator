@@ -1,6 +1,8 @@
 <?
 
-$letters = array_merge(range('A', 'B'), range('a', 'b'));
+$letters = array_merge(range('A', 'Z'), range('a', 'z'));
 
 $symbols = array('!', '@', '#', '$', '%', '^', '&', '*', '-', '_', '=', '+', '|', ';',  ',', '.', '<', '>', '/', '?');
-$numbers = range(0, 1);
+$numbers = range(0, 9);
+
+$array_numbers = [];

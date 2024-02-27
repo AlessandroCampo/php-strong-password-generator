@@ -34,6 +34,21 @@ session_start();
                     <label class="form-check-label" for="flexSwitchCheckDefault">Allow character repetition</label>
                 </div>
 
+                <ul class="list-group mt-3">
+                    <li class="list-group-item">
+                        <input class="form-check-input me-1" type="checkbox" value=1 id="firstCheckbox" name="allow_letters">
+                        <label class="form-check-label" for="firstCheckbox">Letters</label>
+                    </li>
+                    <li class="list-group-item">
+                        <input class="form-check-input me-1" type="checkbox" value=2 id="secondCheckbox" name="allow_numbers">
+                        <label class="form-check-label" for="secondCheckbox">Numbers</label>
+                    </li>
+                    <li class="list-group-item">
+                        <input class="form-check-input me-1" type="checkbox" value=3 id="thirdCheckbox" name="allow_symbols">
+                        <label class="form-check-label" for="thirdCheckbox">Symbols</label>
+                    </li>
+                </ul>
+
             </div>
 
             <button type="submit" class="btn btn-primary mt-2">Submit</button>
